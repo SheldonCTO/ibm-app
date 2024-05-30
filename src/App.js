@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Notification from './Components/Notification/Notification';
-import Layout from './Components/Landing_Page/Landing_page'};
+import Layout from './Components/Landing_Page/Landing_page';
 import GiveReviews from './Components/ReviewForm/ReviewForm.js';
+import Navbar from './Components/Navbar/Navbar';
 import './App.css';
 
 function App() {
   return (
 <div className="App">
         <BrowserRouter>
+        <Navbar/>
           <Notification>
               <Routes>
                 <Route path="/login" element={<Login />}/>
