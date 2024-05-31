@@ -1,9 +1,9 @@
 import React from "react"; // Importing React library for building UI components
 import { Link } from "react-router-dom"; // Importing Link component from react-router-dom for navigation
-import "./Landing_Page.css"; // Importing styles for Landing Page component
+import "./LandingPage.css"; // Importing styles for Landing Page component
 
 // Functional component for the Landing Page
-const Landing_Page = () => {
+const LandingPage = () => {
   return (
     <section className="hero-section"> {/* Hero section container */}
       <div>
@@ -40,4 +40,4 @@ const Landing_Page = () => {
   );
 };
 
-export default Landing_Page; // Exporting Landing Page component as default
+export default LandingPage; // Exporting Landing Page component as default

@@ -10,6 +10,9 @@ const InstantConsultation = () => {
     const [filteredDoctors, setFilteredDoctors] = useState([]);
     const [isSearched, setIsSearched] = useState(false);
     
+    
+
+ 
     const getDoctorsDetails = () => {
         fetch('https://api.npoint.io/9a5543d36f1460da2f63')
         .then(res => res.json())
@@ -57,6 +60,7 @@ const InstantConsultation = () => {
         //     navigate("/login");
         // }
     }, [searchParams])
+
 
     return (
         <center>
