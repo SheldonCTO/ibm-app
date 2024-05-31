@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Notification from './components/Notification/Notification';
-import Login from './components/Login/Login'
-import SignUp from './components/SignUp/SignUp';
-import LandingPage from './components/LandingPage/LandingPage';
-import InstantConsultation from './components/InstantConsultation/InstantConsultation';
-import GiveReviews from './components/ReviewForm/ReviewForm.js';
+import Notification from './components/notification/notification';
+import Login from './components/login/login'
+import SignUp from './components/signUp/signUp';
+import LandingPage from './components/landingPage/landingPage';
+import InstantConsultation from './components/instantConsultation/instantConsultation';
+import GiveReviews from './components/reviewForm/reviewForm.js';
 // import Navbar from './Components/Navbar/Navbar';
 import './App.css';
 

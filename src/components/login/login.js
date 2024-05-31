@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 // Apply CSS according to the design theme or provided CSS from week 2 lab 2
 import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
+import "./login.css"
 
 // Define the Login functional component
 const Login = () => {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../navbar/navbar';
+import "./notification.css";
 
 const Notification = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

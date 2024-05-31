@@ -1,6 +1,6 @@
 import React from "react"; // Importing React library for building UI components
 import { Link } from "react-router-dom"; // Importing Link component from react-router-dom for navigation
-import "./LandingPage.css"; // Importing styles for Landing Page component
+import "./landingPage.css"; // Importing styles for Landing Page component
 
 // Functional component for the Landing Page
 const LandingPage = () => {
