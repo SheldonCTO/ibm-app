@@ -30,7 +30,7 @@ const LandingPage = () => {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem!
             </h4> {/* Description text for the Landing Page */}
             
-            <a href="#services"> {/* Link to scroll down to services section */}
+            <a href="/"> {/* Link to scroll down to services section */}
               <button class="button">Get Started</button> {/* Button to navigate to services section */}
             </a>
             
