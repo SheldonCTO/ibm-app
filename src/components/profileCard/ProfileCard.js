@@ -135,8 +135,7 @@ return (
 ) : (
 <div className="profile-details">
 <h1>Welcome, {userDetails.name}</h1>
-<p> <b>Email:</b> {userDetails.email}</p>
-        <p><b>Phone:</b> {userDetails.phone}</p>
+
 <button onClick={handleEdit}>Edit</button>
 </div>
 )}
