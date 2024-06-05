@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './signUp.css'
+import './signUp.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
 
-const signUp = () => {
+const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -26,7 +26,6 @@ const signUp = () => {
                 email: email,
                 password: password,
                 phone: phone,
-
             }),
         });
 
@@ -35,11 +34,10 @@ const signUp = () => {
         if (json.authtoken) {
             sessionStorage.setItem("auth-token", json.authtoken);
             sessionStorage.setItem("name", name);
-            // phone and email
             sessionStorage.setItem("phone", phone);
             sessionStorage.setItem("email", email);
             // Redirect to home page
-            navigate("/");   //on directing to home page you need to give logic to change login and signup buttons with name of the user and logout button where you have implemented Navbar functionality
+            navigate("/"); 
             window.location.reload();
         } else {
             if (json.errors) {
@@ -53,31 +51,68 @@ const signUp = () => {
     };
 
     return (
-        <div className="container" style={{marginTop:'5%'}}>
-        <div className="signup-grid">
-        <div className="signup-form">
-         <form method="POST" onSubmit={register}>
-         <div className="form-group">
-           <label htmlFor="name">Name</label>
-           <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
-       </div>
-       <div className="form-group">
-           <label htmlFor="phone">Phone</label>
-           <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
-       </div>
-       <div className="form-group">
-           <label htmlFor="password">Password</label>
-           <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
-
-       </div>
-
-//apply logic here for other elements such as name, phone and password to take user information
-         </form>
-         </div>
-         </div>
-         </div>
- //Sign up role is not stored in database. You can apply logic for this according to your react code.
+        <div className="container" style={{ marginTop: '5%' }}>
+            <div className="signup-grid">
+                <div className="signup-form">
+                    <form method="POST" onSubmit={register}>
+                        <div className="form-group">
+                            <label htmlFor="name">Name</label>
+                            <input
+                                value={name}
+                                type="text"
+                                onChange={(e) => setName(e.target.value)}
+                                name="name"
+                                id="name"
+                                className="form-control"
+                                placeholder="Enter your name"
+                                aria-describedby="helpId"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phone">Phone</label>
+                            <input
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                className="form-control"
+                                placeholder="Enter your phone number"
+                                aria-describedby="helpId"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password">Password</label>
+                            <input
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                name="password"
+                                id="password"
+                                className="form-control"
+                                placeholder="Enter your password"
+                                aria-describedby="helpId"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
+                            <input
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                type="email"
+                                name="email"
+                                id="email"
+                                className="form-control"
+                                placeholder="Enter your email"
+                                aria-describedby="helpId"
+                            />
+                        </div>
+                        {showerr && <p className="error">{showerr}</p>}
+                        <button type="submit" className="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     );
 }
 
-export default signUp;
+export default SignUp;
