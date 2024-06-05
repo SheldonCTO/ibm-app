@@ -5,7 +5,7 @@ import Login from './components/login/login'
 import SignUp from './components/signUp/signUp';
 import LandingPage from './components/landingPage/landingPage';
 import InstantConsultation from './components/instantConsultation/instantConsultation';
-import GiveReviews from './components/reviewForm/reviewForm';
+import ReviewForm from './components/reviewForm/Review';
 
 import './App.css';
 
@@ -17,7 +17,7 @@ function App() {
           <Notification>
               <Routes>
               <Route path="/landingPage" element={<LandingPage />} />
-              <Route path="/reviewForm" element={<GiveReviews />} />
+              <Route path="/Review" element={<ReviewForm />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signUp" element={<SignUp />} />
               
